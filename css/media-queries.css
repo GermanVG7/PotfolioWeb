@@ -1,0 +1,132 @@
+@media (max-width: 900px) {
+    aside {
+        position: static !important;
+        width: 100%;
+        border-radius: 1rem;
+        box-shadow: none;
+        margin: 32px auto 0 auto;
+        padding: 20px 10px;
+        text-align: center;
+        top: auto;
+        right: auto;
+        transform: none;
+        z-index: auto;
+    }
+    .presentacion {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+    .presentacion img {
+        width: 120px;
+        height: 120px;
+        margin: 0 0 16px 0;
+        padding: 0;
+    }
+    .presentacion p {
+        padding: 10px;
+        font-size: 1em;
+        text-align: center;
+        word-break: break-word;
+    }
+    .tech-list {
+        justify-content: center;
+    }
+    .sec-proyectos article .proyecto-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .proyecto-img {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    .presentacion {
+        padding: 4px 0;
+    }
+    .presentacion img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+    .presentacion p {
+        padding: 4px;
+        font-size: 0.95em;
+    }
+    footer {
+        font-size: 0.98em;
+        padding: 16px 0;
+    }
+    .footer-social a {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2em;
+        line-height: 32px;
+    }
+    .cv-download-btn {
+        padding: 7px 8px 7px 6px;
+        font-size: 0.98em;
+        min-width: 0;
+    }
+    .cv-btn-text {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 1.7em;
+        padding: 12px;
+    }
+    nav {
+        max-width: 100%;
+        padding: 8px;
+    }
+    nav a {
+        font-size: 1em;
+        margin: 0 8px;
+        padding: 6px 0;
+    }
+}
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 1.2em;
+        padding: 8px;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 0;
+    }
+    nav a {
+        display: block;
+        font-size: 1.1em;
+        margin: 8px 0;
+        padding: 8px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1800px) {
+    aside {
+        position: static !important;
+        width: 70%;
+        border-radius: 1rem;
+        box-shadow: none;
+        margin: 32px auto 0 auto;
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 1.2rem;
+        top: auto !important;
+        right: auto !important;
+        transform: none !important;
+        z-index: auto;
+    }
+    .tech-list {
+        justify-content: center;
+    }
+}

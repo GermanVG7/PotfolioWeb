@@ -8,129 +8,163 @@
 
     <meta name="theme-color" content="#4CAF50">
     <link rel="icon" type="image/jpg" href="/img/Yo.jfif">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/media-queries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
 </head>
 
 <body>
 
-    <header>
+    <header class="header">
         <h1>Portfolio Germán Villar García</h1>
 
         <nav>
-            <a href="#formacion">Formación</a>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#tecnologias">Tecnologías</a>
-            <a href="#proyectos">Proyectos</a>
+            <a class="link" href="#formacion">Formación</a>
+            <a class="link" href="#experiencia">Experiencia</a>
+            <a class="link" href="#proyectos">Proyectos</a>
         </nav>
     </header>
 
+    <aside>
+        <header>Mis tecnologías favoritas</header>
+        <div class="tech-list">
+            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" data-name="Java"></div>
+            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" data-name="HTML5"></div>
+            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" data-name="CSS3"></div>
+            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" data-name="JavaScript"></div>
+            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" data-name="React"></div>
+            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" data-name="Node.js"></div>
+            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" data-name="MySQL"></div>
+            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" data-name="GitHub"></div>
+            <div class="tech-icon"><img src="img/github-copilot-icon.png" alt="GitHub Copilot" data-name="GitHub Copilot"></div>
+        </div>
+        <div class="tech-name-fixed"></div>
+    </aside>
+
     <main>
+        <section class="presentacion">
 
-        <p><strong>Desarrollador de Aplicaciones Multiplataforma</strong> con formación adicional en <strong>desarrollo
-                web</strong>. Motivado, con muchas ganas de aprender y crecer profesionalmente en el sector tecnológico,
-            buscando mi primera oportunidad laboral para aportar y seguir desarrollándome.</p>
+            <img id="foto-german" class="profile-photo" src="/img/Yo.jfif" alt="Imagen de Germán Villar García"
+                title="Foto de Germán Villar García">
+            <p>
+                Soy un apasionado del <strong>desarrollo de aplicaciones multiplataforma y web</strong>, con una sólida
+                formación técnica y una gran motivación por aprender y crecer en el sector tecnológico. Me caracterizo
+                por mi capacidad de adaptación, trabajo en equipo y ganas de afrontar nuevos retos. Busco mi primera
+                oportunidad laboral para aportar valor, seguir desarrollándome y contribuir al éxito de tu empresa.
+            </p>
 
-        <img id="foto-german" src="/img/Yo.jfif" alt="Imagen de Germán Villar García"
-            title="Foto de Germán Villar García">
+        </section>
 
-        <h2 id="formacion">Formación</h2>
+        <section class="formacion">
+            <h2 id="formacion">Formación</h2>
 
-        <ul>
-            <li class="lista-li-formacion">FP de Grado Superior en Desarrollo de Aplicaciones Multiplataforma - CIFP Aviles, 2023
-            </li>
-            <li class="lista-li-formacion">Certificado de profesionalidad: Curso de Confección y publicación de páginas web - Core Networks, 2025</li>
-        </ul>
+            <ul>
+                <li class="lista-li-formacion">FP de Grado Superior en Desarrollo de Aplicaciones Multiplataforma - CIFP
+                    Aviles, 2023
+                </li>
+                <li class="lista-li-formacion">Certificado de profesionalidad: Curso de Confección y publicación de
+                    páginas
+                    web - Core Networks, 2025</li>
+            </ul>
+        </section>
 
-        <h2 id="experiencia">Experiencia</h2>
+        <section class="experiencia">
+            <h2 id="experiencia">Experiencia</h2>
 
-        <ul>
-            <li><strong>Prácticas profesionales</strong> en empresa (Mecalux, 2022). Técnico N1 de tele mantenimiento,
-                iagnóstico y resolución de incidencias relacionadas con los
-                servicios y software contratados por los clientes, garantizando
-                su correcto funcionamiento. </li>
-            <li><strong>Prácticas profesionales</strong> en empresa (Doers DF, 2025). Participación en proyectos
-                de desarrollo de web, aplicando conocimientos adquiridos durante la formación y colaborando en tareas
-                reales del equipo de desarrollo.</li>
-        </ul>
+            <ul>
+                <li><strong>Prácticas profesionales</strong> en empresa (Mecalux, 2022). Técnico N1 de tele
+                    mantenimiento,
+                    diagnóstico y resolución de incidencias relacionadas con los
+                    servicios y software contratados por los clientes, garantizando
+                    su correcto funcionamiento. </li>
+                <li><strong>Prácticas profesionales</strong> en empresa (Doers DF, 2025). Participación en proyectos
+                    de desarrollo de web, aplicando conocimientos adquiridos durante la formación y colaborando en
+                    tareas
+                    reales del equipo de desarrollo.</li>
+            </ul>
+        </section>
 
-        <h2 id="proyectos">Proyectos realizados</h2>
-
-        <aside>
-            <header>Mis tecnologias favoritas</header>
-            <ol>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Java</li>
-                <li>MySQL</li>
-            </ol>
-        </aside>
-
-        <section>
+        <section class="sec-proyectos">
+            <h2 id="proyectos">Proyectos realizados</h2>
             <article>
-                <header>
-                    <h4>Aplicación de escritorio de gestión de almacén</h4>
-                </header>
-                <p>Desarrollo de una aplicación de escritorio para la gestión de inventarios, permitiendo a los usuarios
-                    añadir, modificar y eliminar productos, así como consultar el estado del stock en tiempo real.
-                    Desarrollado como proyecto de final del grado superior.</p>
-                <footer>
-                    <small>Tecnologías utilizadas: Java, MySQL</small>
-                </footer>
+                <div class="proyecto-content">
+                    <div class="proyecto-text">
+                        <header>
+                            <h4><a href="https://github.com/GermanVG7/Gestion_Almacen" target="_blank">Aplicación de escritorio de gestión de almacén</a></h4>
+                        </header>
+                        <p>Desarrollo de una aplicación de escritorio para la gestión de inventarios, permitiendo a los usuarios añadir, modificar y eliminar productos, así como consultar el estado del stock en tiempo real. Desarrollado como proyecto de final del grado superior.</p>
+                        <footer>
+                            <small>Tecnologías utilizadas: Java, MySQL</small>
+                        </footer>
+                    </div>
+                    <img class="proyecto-img" src="img/LogoAlmacen.png" alt="Imagen del proyecto" title="Proyecto ejemplo">
+                </div>
             </article>
 
             <article>
-                <header>
-                    <h4>Web personal de una artista</h4>
-                </header>
-                <p>Desarrollo de una web personal para una artista, permitiendo mostrar su portfolio, biografía y
-                    información de contacto. Desarrollado como proyecto de final del curso de confección y publicación
-                    de
-                    páginas web.</p>
-                <footer>
-                    <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
-                </footer>
+                <div class="proyecto-content">
+                    <div class="proyecto-text">
+                        <header>
+                            <h4><a href="https://github.com/GermanVG7/WebArteLea" target="_blank">Web personal de una artista</a></h4>
+                        </header>
+                        <p>Desarrollo de una web personal para una artista, permitiendo mostrar su portfolio, biografía y información de contacto. Desarrollado como proyecto de final del curso de confección y publicación de páginas web.</p>
+                        <footer>
+                            <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+                        </footer>
+                    </div>
+                    <img class="proyecto-img" src="img/proyecto-ejemplo.jpg" alt="Imagen del proyecto" title="Proyecto ejemplo">
+                </div>
             </article>
 
             <article>
-                <header>
-                    <h4>Portfolio web 3D personal</h4>
-                </header>
-                <p>Desarrollo de un portfolio web 3D, con una web animada con elementos tridimensionales. Desarrollado
-                    como
-                    proyecto personal.</p>
-                <footer>
-                    <small>Tecnologías utilizadas: HTML, CSS, JavaScript, React, Three Fiber, Blender</small>
-                </footer>
+                <div class="proyecto-content">
+                    <div class="proyecto-text">
+                        <header>
+                            <h4><a href="https://github.com/GermanVG7/Portfolio3D" target="_blank">Portfolio web 3D personal</a></h4>
+                        </header>
+                        <p>Desarrollo de un portfolio web 3D, con una web animada con elementos tridimensionales. Desarrollado como proyecto personal.</p>
+                        <footer>
+                            <small>Tecnologías utilizadas: HTML, CSS, JavaScript, React, Three Fiber, Blender</small>
+                        </footer>
+                    </div>
+                    <img class="proyecto-img" src="img/Portfolio3D.JPG" alt="Imagen del proyecto" title="Proyecto ejemplo">
+                </div>
             </article>
 
             <article>
-                <header>
-                    <h4>Web de Agencia Digital</h4>
-                </header>
-                <p>Desarrollo de un sitio web para una agencia digital, con un diseño moderno y elementos interactivos. Desarrollado
-                    como proyecto personal para prácticar.</p>
-                <footer>
-                    <small>Tecnologías utilizadas: HTML, CSS, JavaScript, WP, Timber, Twig</small>
-                </footer>
+                <div class="proyecto-content">
+                    <div class="proyecto-text">
+                        <header>
+                            <h4><a href="https://github.com/GermanVG7/DigitlandWP" target="_blank">Web de Agencia Digital</a></h4>
+                        </header>
+                        <p>Desarrollo de un sitio web para una agencia digital, con un diseño moderno y elementos interactivos. Desarrollado como proyecto personal para prácticar.</p>
+                        <footer>
+                            <small>Tecnologías utilizadas: HTML, CSS, JavaScript, WP, Timber, Twig</small>
+                        </footer>
+                    </div>
+                    <img class="proyecto-img" src="img//DigitalWP.JPG" alt="Imagen del proyecto" title="Proyecto ejemplo">
+                </div>
             </article>
         </section>
 
         <form action="post">
             <fieldset>
                 <legend>Información de contacto</legend>
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="tel">Teléfono:</label>
-            <input type="tel" id="tel" name="tel" required>
+                <label for="tel">Teléfono:</label>
+                <input type="tel" id="tel" name="tel">
 
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
             </fieldset>
 
             <button type="submit">Enviar</button>
@@ -139,9 +173,22 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Germán Villar García. Todos los derechos reservados.</p>
+        <div class="footer-copy">&copy; 2025 Germán Villar García. Todos los derechos reservados.</div>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/germ%C3%A1n-villar-garc%C3%ADa-0b375594/" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/GermanVG7" target="_blank" title="GitHub" aria-label="GitHub">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+            </a>
+            <button class="cv-download-btn" onclick="window.open('cv/GermanVillarGarciaCV.pdf', '_blank')" title="Descargar CV en PDF" aria-label="Descargar CV" type="button">
+                <span class="cv-btn-content">
+                    <span class="cv-btn-text">Descargar CV (PDF)</span>
+                </span>
+            </button>
+        </div>
     </footer>
-
+    <script src="javascript/javascript.js"></script>
 </body>
 
 </html>
