@@ -1,468 +1,636 @@
+/* ====================================
+   COMPONENTES - Elementos específicos
+   ==================================== */
+
+/* ===== NAVEGACIÓN ===== */
+/* Enlaces de navegación con efecto subrayado animado */
 nav a {
-    color: #3B82F6;
-    text-decoration: none;
-    font-size: 1.1em;
-    position: relative;
-    transition: color 0.3s;
+    color: #3B82F6;              /* Color azul inicial */
+    text-decoration: none;       /* Sin decoración de texto */
+    font-size: 1.1em;           /* Tamaño de fuente */
+    position: relative;          /* Para posicionar pseudo-elemento */
+    transition: color 0.3s;      /* Transición suave de color */
 }
 
+/* Pseudo-elemento para crear línea animada debajo del enlace */
 nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2px;
-    background: #60A5FA;
-    transition: width 0.3s;
-    border-radius: 2px;
+    content: '';                 /* Contenido vacío */
+    position: absolute;          /* Posición absoluta */
+    left: 0;                     /* Alineado a la izquierda */
+    bottom: -4px;                /* Debajo del texto */
+    width: 0;                    /* Ancho inicial 0 */
+    height: 2px;                 /* Altura de la línea */
+    background: #60A5FA;         /* Color azul claro */
+    transition: width 0.3s;      /* Animación del ancho */
+    border-radius: 2px;          /* Bordes redondeados */
 }
 
+/* Estado hover de los enlaces */
 nav a:hover {
-    color: #60A5FA;
+    color: #60A5FA;              /* Cambio de color al pasar el mouse */
 }
 
 nav a:hover::after {
-    width: 100%;
+    width: 100%;                 /* Expandir línea al 100% */
 }
 
-/* Botón de descarga de CV en el footer: aspecto de botón moderno y claro */
+/* ===== BOTÓN DESCARGA CV ===== */
+/* Botón moderno con gradiente y efectos */
 .cv-download-btn {
-    display: inline-flex;
-    align-items: center;
-    background: linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%);
-    color: #fff;
-    border: none;
-    border-radius: 0.35rem;
-    padding: 10px 22px 10px 14px;
-    font-size: 1.08em;
-    font-weight: 500;
-    margin-left: 18px;
-    box-shadow: 0 2px 12px rgba(59,130,246,0.18);
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-    vertical-align: middle;
-    gap: 10px;
-    min-width: 140px;
-    outline: none;
-    border: 2px solid transparent;
+    display: inline-flex;        /* Layout flexbox inline */
+    align-items: center;         /* Centrar contenido verticalmente */
+    background: linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%); /* Gradiente azul */
+    color: #fff;                 /* Texto blanco */
+    border: none;                /* Sin borde */
+    border-radius: 0.35rem;      /* Bordes redondeados */
+    padding: 10px 22px 10px 14px; /* Espaciado interno asimétrico */
+    font-size: 1.08em;           /* Tamaño de fuente */
+    font-weight: 500;            /* Peso de fuente medio */
+    margin-left: 18px;           /* Margen izquierdo */
+    box-shadow: 0 2px 12px rgba(59,130,246,0.18); /* Sombra sutil */
+    cursor: pointer;             /* Cursor de mano */
+    text-decoration: none;       /* Sin decoración */
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s; /* Transiciones múltiples */
+    vertical-align: middle;      /* Alineación vertical */
+    gap: 10px;                   /* Espacio entre elementos */
+    min-width: 140px;            /* Ancho mínimo */
+    outline: none;               /* Sin outline */
+    border: 2px solid transparent; /* Borde transparente para estados activos */
 }
 
+/* Estados activo y foco del botón */
 .cv-download-btn:active,
 .cv-download-btn:focus {
-    border: 2px solid #60A5FA;
-    box-shadow: 0 0 0 2px #60A5FA33;
+    border: 2px solid #60A5FA;   /* Borde azul visible */
+    box-shadow: 0 0 0 2px #60A5FA33; /* Sombra de foco */
 }
 
+/* Estado hover del botón */
 .cv-download-btn:hover {
-    background: linear-gradient(90deg, #60A5FA 0%, #3B82F6 100%);
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 4px 24px rgba(59,130,246,0.28);
-    color: #F9FAFB;
+    background: linear-gradient(90deg, #60A5FA 0%, #3B82F6 100%); /* Gradiente invertido */
+    transform: translateY(-2px) scale(1.04); /* Elevar y escalar ligeramente */
+    box-shadow: 0 4px 24px rgba(59,130,246,0.28); /* Sombra más pronunciada */
+    color: #F9FAFB;              /* Color de texto más claro */
 }
 
+/* Contenedor interno del botón */
 .cv-btn-content {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: flex;               /* Layout flexbox */
+    align-items: center;         /* Centrar elementos */
+    gap: 8px;                    /* Espacio entre elementos */
 }
 
+/* Texto del botón */
 .cv-btn-text {
-    font-size: 1em;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    background: none;
+    font-size: 1em;              /* Tamaño de fuente */
+    font-weight: 500;            /* Peso medio */
+    letter-spacing: 0.5px;       /* Espaciado entre letras */
+    background: none;            /* Sin fondo */
 }
+/* ===== SECCIÓN FORMACIÓN ===== */
+/* Contenedor principal de la sección formación */
 .formacion {
-    background: #232946;
-    border: none;
-    border-radius: 1rem;
-    box-shadow: 0 2px 16px rgba(59,130,246,0.08);
-    padding: 32px 24px;
-    margin-top: 75px;
-    max-width: 1200px;
-    margin-left: 0;
-    margin-right: 0;
-    color: #F9FAFB;
-    text-align: left;
-    width: 100%;
+    background: #232946;         /* Fondo azul oscuro */
+    border: none;                /* Sin borde */
+    border-radius: 1rem;         /* Bordes redondeados */
+    box-shadow: 0 2px 16px rgba(59,130,246,0.08); /* Sombra sutil azul */
+    padding: 32px 24px;          /* Espaciado interno generoso */
+    margin-top: 75px;            /* Separación superior */
+    max-width: 1200px;           /* Ancho máximo */
+    margin-left: 0;              /* Sin margen izquierdo */
+    margin-right: 0;             /* Sin margen derecho */
+    color: #F9FAFB;              /* Texto claro */
+    text-align: left;            /* Alineación izquierda */
+    width: 100%;                 /* Ancho completo */
 }
+
+/* Título de la sección formación */
 .formacion h2 {
-    color: #3B82F6;
-    font-weight: bold;
-    font-size: 1.4rem;
-    margin-bottom: 18px;
-    letter-spacing: 1px;
-    text-align: left;
+    color: #3B82F6;              /* Color azul */
+    font-weight: bold;           /* Texto en negrita */
+    font-size: 1.4rem;           /* Tamaño de fuente */
+    margin-bottom: 18px;         /* Margen inferior */
+    letter-spacing: 1px;         /* Espaciado entre letras */
+    text-align: left;            /* Alineación izquierda */
 }
+
+/* Listas en formación */
 .formacion ul, .formacion ol {
-    margin: 18px 0 0 0;
-    padding-left: 1.2em;
+    margin: 18px 0 0 0;          /* Márgenes específicos */
+    padding-left: 1.2em;         /* Espaciado izquierdo */
 }
+
+/* Elementos de lista en formación */
 .formacion li {
-    margin-bottom: 12px;
-    font-size: 1.2em;
-    line-height: 1.6;
-    letter-spacing: 0.5px;
-    list-style: none;
-    position: relative;
-    padding-left: 22px;
+    margin-bottom: 12px;         /* Separación entre elementos */
+    font-size: 1.2em;           /* Tamaño de fuente mayor */
+    line-height: 1.6;            /* Interlineado cómodo */
+    letter-spacing: 0.5px;       /* Espaciado entre letras */
+    list-style: none;            /* Sin marcadores por defecto */
+    position: relative;          /* Para posicionar pseudo-elemento */
+    padding-left: 22px;          /* Espacio para marcador personalizado */
 }
+
+/* Marcador personalizado para formación (punto) */
 .formacion li::before {
-    content: "\2022";
-    position: absolute;
-    left: 0;
-    top: 0.2em;
-    color: #3B82F6;
-    font-size: 1.3em;
-    line-height: 1;
+    content: "\2022";            /* Carácter bullet */
+    position: absolute;          /* Posición absoluta */
+    left: 0;                     /* Alineado a la izquierda */
+    top: 0.2em;                  /* Posición vertical */
+    color: #3B82F6;              /* Color azul */
+    font-size: 1.3em;           /* Tamaño mayor */
+    line-height: 1;              /* Sin interlineado adicional */
 }
+
+/* Párrafos en formación */
 .formacion p {
-    font-size: 1.15em;
-    line-height: 1.7;
-    margin-bottom: 18px;
-    text-align: justify;
+    font-size: 1.15em;           /* Tamaño de fuente */
+    line-height: 1.7;            /* Interlineado amplio */
+    margin-bottom: 18px;         /* Margen inferior */
+    text-align: justify;         /* Texto justificado */
 }
+
+/* ===== SECCIÓN EXPERIENCIA ===== */
+/* Contenedor principal de la sección experiencia */
 .experiencia {
-    background: #232946;
-    border: none;
-    border-radius: 1rem;
-    box-shadow: 0 2px 16px rgba(59,130,246,0.10);
-    padding: 32px 24px;
-    margin-top: 75px;
-    max-width: 1200px;
-    margin-left: 0;
-    margin-right: 0;
-    color: #F9FAFB;
-    text-align: left;
-    width: 100%;
+    background: #232946;         /* Fondo azul oscuro */
+    border: none;                /* Sin borde */
+    border-radius: 1rem;         /* Bordes redondeados */
+    box-shadow: 0 2px 16px rgba(59,130,246,0.10); /* Sombra ligeramente más pronunciada */
+    padding: 32px 24px;          /* Espaciado interno generoso */
+    margin-top: 75px;            /* Separación superior */
+    max-width: 1200px;           /* Ancho máximo */
+    margin-left: 0;              /* Sin margen izquierdo */
+    margin-right: 0;             /* Sin margen derecho */
+    color: #F9FAFB;              /* Texto claro */
+    text-align: left;            /* Alineación izquierda */
+    width: 100%;                 /* Ancho completo */
 }
+
+/* Título de la sección experiencia */
 .experiencia h2 {
-    color: #3B82F6;
-    font-weight: bold;
-    font-size: 1.4rem;
-    margin-bottom: 18px;
-    letter-spacing: 1px;
-    text-align: left;
+    color: #3B82F6;              /* Color azul */
+    font-weight: bold;           /* Texto en negrita */
+    font-size: 1.4rem;           /* Tamaño de fuente */
+    margin-bottom: 18px;         /* Margen inferior */
+    letter-spacing: 1px;         /* Espaciado entre letras */
+    text-align: left;            /* Alineación izquierda */
 }
+
+/* Listas en experiencia */
 .experiencia ul, .experiencia ol {
-    margin: 18px 0 0 0;
-    padding-left: 1.2em;
+    margin: 18px 0 0 0;          /* Márgenes específicos */
+    padding-left: 1.2em;         /* Espaciado izquierdo */
 }
+
+/* Elementos de lista en experiencia */
 .experiencia li {
-    margin-bottom: 12px;
-    font-size: 1.2em;
-    line-height: 1.6;
-    letter-spacing: 0.5px;
-    list-style: none;
-    position: relative;
-    padding-left: 22px;
+    margin-bottom: 12px;         /* Separación entre elementos */
+    font-size: 1.2em;           /* Tamaño de fuente mayor */
+    line-height: 1.6;            /* Interlineado cómodo */
+    letter-spacing: 0.5px;       /* Espaciado entre letras */
+    list-style: none;            /* Sin marcadores por defecto */
+    position: relative;          /* Para posicionar pseudo-elemento */
+    padding-left: 22px;          /* Espacio para marcador personalizado */
 }
+
+/* Marcador personalizado para experiencia (guión) */
 .experiencia li::before {
-    content: "\2013";
-    position: absolute;
-    left: 0;
-    top: 0.2em;
-    color: #60A5FA;
-    font-size: 1.3em;
-    line-height: 1;
+    content: "\2013";            /* Carácter en dash */
+    position: absolute;          /* Posición absoluta */
+    left: 0;                     /* Alineado a la izquierda */
+    top: 0.2em;                  /* Posición vertical */
+    color: #60A5FA;              /* Color azul claro */
+    font-size: 1.3em;           /* Tamaño mayor */
+    line-height: 1;              /* Sin interlineado adicional */
 }
+
+/* Párrafos en experiencia */
 .experiencia p {
-    font-size: 1.15em;
-    line-height: 1.7;
-    margin-bottom: 18px;
-    text-align: justify;
+    font-size: 1.15em;           /* Tamaño de fuente */
+    line-height: 1.7;            /* Interlineado amplio */
+    margin-bottom: 18px;         /* Margen inferior */
+    text-align: justify;         /* Texto justificado */
 }
+/* ===== SECCIÓN PROYECTOS ===== */
+/* Título principal de proyectos */
 #proyectos {
-    text-align: center;
-    font-size: 2.1rem;
-    color: #60A5FA;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 32px;
-    text-shadow: 0 2px 12px rgba(59,130,246,0.18);
+    text-align: center;          /* Centrar texto */
+    font-size: 2.1rem;           /* Tamaño grande */
+    color: #60A5FA;              /* Color azul claro */
+    font-weight: bold;           /* Texto en negrita */
+    letter-spacing: 2px;         /* Espaciado amplio entre letras */
+    margin-bottom: 32px;         /* Margen inferior */
+    text-shadow: 0 2px 12px rgba(59,130,246,0.18); /* Sombra de texto sutil */
 }
+
+/* Contenedor principal de proyectos */
 .sec-proyectos {
-    background: #232946;
-    border-radius: 1rem;
-    box-shadow: 0 2px 16px rgba(59,130,246,0.10);
-    padding: 36px 28px;
-    max-width: 1200px;
-    margin: 75px 0 0 0;
-    width: 100%;
+    background: #232946;         /* Fondo azul oscuro */
+    border-radius: 1rem;         /* Bordes redondeados */
+    box-shadow: 0 2px 16px rgba(59,130,246,0.10); /* Sombra azul sutil */
+    padding: 36px 28px;          /* Espaciado interno generoso */
+    max-width: 1200px;           /* Ancho máximo */
+    margin: 75px 0 0 0;          /* Margen superior */
+    width: 100%;                 /* Ancho completo */
 }
+
+/* Artículos individuales de proyectos con animación */
 .sec-proyectos article {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1.3s cubic-bezier(.77,.2,.32,1.01), transform 1.3s cubic-bezier(.77,.2,.32,1.01);
-    background: #1F2235;
-    border-radius: 0.8rem;
-    margin-bottom: 32px;
-    padding: 24px 20px;
-    box-shadow: 0 2px 12px rgba(59,130,246,0.08);
-    border-left: 4px solid #60A5FA;
+    opacity: 0;                  /* Inicialmente invisible para animación */
+    transform: translateY(40px); /* Desplazamiento inicial hacia abajo */
+    transition: opacity 1.3s cubic-bezier(.77,.2,.32,1.01), 
+                transform 1.3s cubic-bezier(.77,.2,.32,1.01); /* Transiciones suaves */
+    background: #1F2235;         /* Fondo oscuro diferenciado */
+    border-radius: 0.8rem;       /* Bordes redondeados */
+    margin-bottom: 32px;         /* Separación entre proyectos */
+    padding: 24px 20px;          /* Espaciado interno */
+    box-shadow: 0 2px 12px rgba(59,130,246,0.08); /* Sombra sutil */
+    border-left: 4px solid #60A5FA; /* Borde izquierdo azul destacado */
 }
+
+/* Estado visible de los artículos (activado por JavaScript) */
 .sec-proyectos article.visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1;                  /* Totalmente visible */
+    transform: translateY(0);    /* Posición final */
 }
+
+/* Títulos de proyectos */
 .sec-proyectos h4 {
-    color: #3B82F6;
-    font-size: 1.3rem;
-    margin-bottom: 0;
-    font-weight: bold;
+    color: #3B82F6;              /* Color azul */
+    font-size: 1.3rem;           /* Tamaño destacado */
+    margin-bottom: 0;            /* Sin margen inferior */
+    font-weight: bold;           /* Texto en negrita */
 }
+
+/* Enlaces en títulos de proyectos */
 .sec-proyectos h4 a {
-    color: #3B82F6;
-    text-decoration: none;
-    transition: color 0.3s;
-    position: relative;
+    color: #3B82F6;              /* Color azul */
+    text-decoration: none;       /* Sin decoración */
+    transition: color 0.3s;      /* Transición de color suave */
+    position: relative;          /* Para posicionar pseudo-elemento */
 }
+
+/* Línea animada debajo de enlaces de proyectos */
 .sec-proyectos h4 a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background: #60A5FA;
-    transition: width 0.3s;
-    border-radius: 2px;
+    content: '';                 /* Contenido vacío */
+    position: absolute;          /* Posición absoluta */
+    left: 0;                     /* Alineado a la izquierda */
+    bottom: -2px;                /* Debajo del texto */
+    width: 0;                    /* Ancho inicial 0 */
+    height: 2px;                 /* Altura de línea */
+    background: #60A5FA;         /* Color azul claro */
+    transition: width 0.3s;      /* Animación del ancho */
+    border-radius: 2px;          /* Bordes redondeados */
 }
+
+/* Estado hover de enlaces de proyectos */
 .sec-proyectos h4 a:hover {
-    color: #60A5FA;
+    color: #60A5FA;              /* Cambio de color */
 }
+
 .sec-proyectos h4 a:hover::after {
-    width: 100%;
+    width: 100%;                 /* Expandir línea */
 }
+
+/* Párrafos de descripción de proyectos */
 .sec-proyectos p {
-    font-size: 1.08em;
-    margin-bottom: 10px;
-    color: #F9FAFB;
+    font-size: 1.08em;           /* Tamaño ligeramente mayor */
+    margin-bottom: 10px;         /* Margen inferior */
+    color: #F9FAFB;              /* Texto claro */
 }
+
+/* Información de tecnologías en footer de proyecto */
 .sec-proyectos footer small {
-    color: #60A5FA;
-    font-size: 0.98em;
+    color: #60A5FA;              /* Color azul claro */
+    font-size: 0.98em;           /* Tamaño ligeramente menor */
 }
+
+/* Header de cada proyecto con efecto hover */
 .sec-proyectos article header {
-    max-width: 520px;
-    margin: 0 auto 10px auto;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-    transition: background 0.3s;
+    max-width: 520px;            /* Ancho máximo */
+    margin: 0 auto 10px auto;    /* Centrado con margen inferior */
+    padding-left: 0;             /* Sin padding izquierdo */
+    padding-right: 0;            /* Sin padding derecho */
+    text-align: center;          /* Centrar contenido */
+    transition: background 0.3s; /* Transición de fondo */
 }
+
+/* Efecto hover en header de proyecto */
 .sec-proyectos article header:hover,
 .sec-proyectos article header:has(a:hover) {
-    background: #233a5e;
-    border-radius: 0.7rem;
-}
-.sec-proyectos article .proyecto-content {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-.sec-proyectos article .proyecto-text {
-    flex: 1;
-    min-width: 0;
-}
-.proyecto-img {
-    width: 220px;
-    height: 140px;
-    max-width: 100%;
-    border: 3px solid #3B82F6;
-    border-radius: 1rem;
-    box-shadow: 0 2px 12px rgba(59,130,246,0.10);
-    object-fit: cover;
-    background: #1F2937;
-}
-form {
-    background: #232946;
-    border-radius: 1rem;
-    box-shadow: 0 2px 16px rgba(59,130,246,0.10);
-    border: 1.5px solid #3B82F6;
-    padding: 32px 28px;
-    max-width: 600px;
-    width: 100%;
-    margin: 48px auto 0 auto;
-    color: #F9FAFB;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-fieldset {
-    border: none;
-    padding: 0;
-    margin: 0 0 18px 0;
-}
-legend {
-    color: #60A5FA;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-bottom: 18px;
-    letter-spacing: 1px;
-}
-label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 1.08em;
-    color: #3B82F6;
-    font-weight: 500;
-}
-input, textarea {
-    width: 100%;
-    padding: 10px 14px;
-    border: 1.5px solid #3B82F6;
-    border-radius: 0.7rem;
-    background: #1F2937;
-    color: #F9FAFB;
-    font-size: 1em;
-    margin-bottom: 16px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 8px rgba(59,130,246,0.08);
-}
-input:focus, textarea:focus {
-    border-color: #60A5FA;
-    outline: none;
-    box-shadow: 0 2px 16px rgba(59,130,246,0.18);
-}
-button[type="submit"] {
-    background: linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%);
-    color: #F9FAFB;
-    border: none;
-    border-radius: 0.7rem;
-    padding: 12px 32px;
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 12px rgba(59,130,246,0.10);
-    transition: background 0.3s, transform 0.2s;
-    margin-top: 10px;
-    width: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-button[type="submit"]:hover {
-    background: linear-gradient(90deg, #60A5FA 0%, #3B82F6 100%);
-    transform: scale(1.04);
-}
-.presentacion {
-    text-align: center;
-    margin-bottom: 20px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-}
-.presentacion img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-right: 20px;
-    border: 4px solid #3B82F6;
-}
-.presentacion p {
-    flex: 1;
-    font-size: 1.2em;
-    line-height: 1.6;
-    text-align: justify;
-    padding: 30px;
-}
-.tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-.tech-list img {
-    width: 38px;
-    height: 38px;
-    object-fit: contain;
-    background: #F9FAFB;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(59,130,246,0.18);
-    border: 2px solid #fff;
-    transition: transform 0.3s, box-shadow 0.3s;
-    padding: 8px;
-}
-.tech-list img:hover {
-    transform: scale(1.15) rotate(-5deg);
-    box-shadow: 0 4px 24px rgba(59,130,246,0.28);
-}
-aside header {
-    font-size: 1.15em;
-    color: #3B82F6;
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
-aside ol {
-    padding-left: 1.2em;
-}
-aside li {
-    margin-bottom: 0.7em;
-    font-size: 1.05em;
-    letter-spacing: 0.5px;
-}
-footer {
-    background: linear-gradient(135deg, #0F172A 0%, #232946 100%);
-    border-top: 2px solid #3B82F6;
-    padding: 24px 0;
-    text-align: center;
-    color: #60A5FA;
-    font-size: 1.08em;
-    letter-spacing: 1px;
-    margin-top: 48px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-}
-.footer-social {
-    display: flex;
-    gap: 18px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 8px;
-    min-height: 38px;
-}
-.footer-social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    background: #F9FAFB;
-    border-radius: 50%;
-    border: none;
-    box-shadow: 0 2px 12px rgba(59,130,246,0.18);
-    transition: box-shadow 0.3s, background 0.3s, transform 0.2s;
-    color: #3B82F6;
-}
-.footer-social a:hover {
-    box-shadow: 0 6px 24px rgba(59,130,246,0.32);
-    background: #E3EAFD;
-    transform: translateY(-4px) scale(1.08);
-    color: #1F2937;
-}
-.footer-social img {
-    width: 24px;
-    height: 24px;
-    display: block;
-}
-.footer-copy {
-    font-size: 1em;
-    color: #60A5FA;
-    margin-top: 4px;
-}
-.pulse-cv {
-  animation: pulse-cv 2.2s cubic-bezier(.77,.2,.32,1.01) infinite;
+    background: #233a5e;         /* Fondo azul al hover */
+    border-radius: 0.7rem;       /* Bordes redondeados */
 }
 
+/* Layout del contenido de proyecto (texto + imagen) */
+.sec-proyectos article .proyecto-content {
+    display: flex;               /* Layout flexbox */
+    align-items: center;         /* Centrar verticalmente */
+    gap: 32px;                   /* Espacio entre texto e imagen */
+}
+
+/* Contenedor de texto del proyecto */
+.sec-proyectos article .proyecto-text {
+    flex: 1;                     /* Ocupar espacio disponible */
+    min-width: 0;                /* Permitir encogimiento */
+}
+
+/* Imágenes de proyectos */
+.proyecto-img {
+    width: 220px;                /* Ancho fijo */
+    height: 140px;               /* Alto fijo */
+    max-width: 100%;             /* Máximo ancho responsive */
+    border: 3px solid #3B82F6;   /* Borde azul */
+    border-radius: 1rem;         /* Bordes redondeados */
+    box-shadow: 0 2px 12px rgba(59,130,246,0.10); /* Sombra sutil */
+    object-fit: cover;           /* Ajuste de imagen sin distorsión */
+    background: #1F2937;         /* Fondo de respaldo */
+}
+/* ===== FORMULARIO DE CONTACTO ===== */
+/* Contenedor principal del formulario */
+form {
+    background: #232946;         /* Fondo azul oscuro */
+    border-radius: 1rem;         /* Bordes redondeados */
+    box-shadow: 0 2px 16px rgba(59,130,246,0.10); /* Sombra azul sutil */
+    border: 1.5px solid #3B82F6; /* Borde azul */
+    padding: 32px 28px;          /* Espaciado interno generoso */
+    max-width: 600px;            /* Ancho máximo */
+    width: 100%;                 /* Ancho completo */
+    margin: 48px auto 0 auto;    /* Centrado con margen superior */
+    color: #F9FAFB;              /* Texto claro */
+    display: flex;               /* Layout flexbox */
+    flex-direction: column;      /* Dirección vertical */
+    gap: 18px;                   /* Espacio entre elementos */
+}
+
+/* Fieldset sin estilos por defecto */
+fieldset {
+    border: none;                /* Sin borde */
+    padding: 0;                  /* Sin padding */
+    margin: 0 0 18px 0;          /* Solo margen inferior */
+}
+
+/* Leyenda del formulario */
+legend {
+    color: #60A5FA;              /* Color azul claro */
+    font-weight: bold;           /* Texto en negrita */
+    font-size: 1.2em;            /* Tamaño destacado */
+    margin-bottom: 18px;         /* Margen inferior */
+    letter-spacing: 1px;         /* Espaciado entre letras */
+}
+
+/* Etiquetas de campos */
+label {
+    display: block;              /* Elemento de bloque */
+    margin-bottom: 6px;          /* Margen inferior pequeño */
+    font-size: 1.08em;           /* Tamaño ligeramente mayor */
+    color: #3B82F6;              /* Color azul */
+    font-weight: 500;            /* Peso medio */
+}
+
+/* Campos de entrada y área de texto */
+input, textarea {
+    width: 100%;                 /* Ancho completo */
+    padding: 10px 14px;          /* Espaciado interno */
+    border: 1.5px solid #3B82F6; /* Borde azul */
+    border-radius: 0.7rem;       /* Bordes redondeados */
+    background: #1F2937;         /* Fondo oscuro */
+    color: #F9FAFB;              /* Texto claro */
+    font-size: 1em;              /* Tamaño de fuente */
+    margin-bottom: 16px;         /* Margen inferior */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    box-shadow: 0 2px 8px rgba(59,130,246,0.08); /* Sombra sutil */
+}
+
+/* Estado focus de campos de entrada */
+input:focus, textarea:focus {
+    border-color: #60A5FA;       /* Borde azul claro al enfocar */
+    outline: none;               /* Sin outline por defecto */
+    box-shadow: 0 2px 16px rgba(59,130,246,0.18); /* Sombra más pronunciada */
+}
+
+/* Botón de envío del formulario */
+button[type="submit"] {
+    background: linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%); /* Gradiente azul */
+    color: #F9FAFB;              /* Texto claro */
+    border: none;                /* Sin borde */
+    border-radius: 0.7rem;       /* Bordes redondeados */
+    padding: 12px 32px;          /* Espaciado interno */
+    font-size: 1.1em;            /* Tamaño de fuente mayor */
+    font-weight: bold;           /* Texto en negrita */
+    cursor: pointer;             /* Cursor de mano */
+    box-shadow: 0 2px 12px rgba(59,130,246,0.10); /* Sombra sutil */
+    transition: background 0.3s, transform 0.2s; /* Transiciones suaves */
+    margin-top: 10px;            /* Margen superior */
+    width: auto;                 /* Ancho automático */
+    display: block;              /* Elemento de bloque */
+    margin-left: auto;           /* Centrar horizontalmente */
+    margin-right: auto;          /* Centrar horizontalmente */
+}
+
+/* Estado hover del botón de envío */
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #60A5FA 0%, #3B82F6 100%); /* Gradiente invertido */
+    transform: scale(1.04);      /* Escalar ligeramente */
+}
+/* ===== SECCIÓN PRESENTACIÓN ===== */
+/* Contenedor principal de presentación */
+.presentacion {
+    text-align: center;          /* Centrar contenido */
+    margin-bottom: 20px;         /* Margen inferior */
+    display: flex;               /* Layout flexbox */
+    margin-left: auto;           /* Centrar horizontalmente */
+    margin-right: auto;          /* Centrar horizontalmente */
+}
+
+/* Foto de perfil */
+.presentacion img {
+    width: 200px;                /* Ancho fijo */
+    height: 200px;               /* Alto fijo */
+    border-radius: 50%;          /* Forma circular */
+    margin-right: 20px;          /* Margen derecho */
+    border: 4px solid #3B82F6;   /* Borde azul */
+}
+
+/* Texto de presentación */
+.presentacion p {
+    flex: 1;                     /* Ocupar espacio disponible */
+    font-size: 1.2em;            /* Tamaño de fuente mayor */
+    line-height: 1.6;            /* Interlineado cómodo */
+    text-align: justify;         /* Texto justificado */
+    padding: 30px;               /* Espaciado interno */
+}
+/* ===== LISTA DE TECNOLOGÍAS (versión alternativa) ===== */
+/* Contenedor de tecnologías alternativo */
+.tech-list {
+    display: flex;               /* Layout flexbox */
+    flex-wrap: wrap;             /* Permitir salto de línea */
+    gap: 18px;                   /* Espacio entre elementos */
+    justify-content: center;     /* Centrar horizontalmente */
+    align-items: center;         /* Centrar verticalmente */
+    margin-top: 10px;            /* Margen superior */
+}
+
+/* Iconos de tecnologías alternativos */
+.tech-list img {
+    width: 38px;                 /* Ancho fijo */
+    height: 38px;                /* Alto fijo */
+    object-fit: contain;         /* Ajuste sin distorsión */
+    background: #F9FAFB;         /* Fondo claro */
+    border-radius: 8px;          /* Bordes redondeados */
+    box-shadow: 0 2px 12px rgba(59,130,246,0.18); /* Sombra azul sutil */
+    border: 2px solid #fff;      /* Borde blanco */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    padding: 8px;                /* Espaciado interno */
+}
+
+/* Efecto hover en iconos alternativos */
+.tech-list img:hover {
+    transform: scale(1.15) rotate(-5deg); /* Escalar y rotar */
+    box-shadow: 0 4px 24px rgba(59,130,246,0.28); /* Sombra más pronunciada */
+}
+
+/* ===== ESTILOS DEL ASIDE ===== */
+/* Header del sidebar */
+aside header {
+    font-size: 1.15em;           /* Tamaño de fuente */
+    color: #3B82F6;              /* Color azul */
+    margin-bottom: 1rem;         /* Margen inferior */
+    font-weight: bold;           /* Texto en negrita */
+}
+
+/* Listas ordenadas en aside */
+aside ol {
+    padding-left: 1.2em;         /* Espaciado izquierdo */
+}
+
+/* Elementos de lista en aside */
+aside li {
+    margin-bottom: 0.7em;        /* Margen inferior */
+    font-size: 1.05em;           /* Tamaño de fuente */
+    letter-spacing: 0.5px;       /* Espaciado entre letras */
+}
+/* ===== FOOTER ===== */
+/* Contenedor principal del footer */
+footer {
+    background: linear-gradient(135deg, #0F172A 0%, #232946 100%); /* Fondo degradado */
+    border-top: 2px solid #3B82F6;    /* Borde superior azul */
+    padding: 24px 0;                  /* Espaciado vertical */
+    text-align: center;               /* Centrar contenido */
+    color: #60A5FA;                   /* Color azul claro */
+    font-size: 1.08em;                /* Tamaño de fuente */
+    letter-spacing: 1px;              /* Espaciado entre letras */
+    margin-top: 48px;                 /* Margen superior */
+    display: flex;                    /* Layout flexbox */
+    flex-direction: column;           /* Dirección vertical */
+    align-items: center;              /* Centrar elementos */
+    gap: 12px;                        /* Espacio entre elementos */
+}
+
+/* Contenedor de redes sociales */
+.footer-social {
+    display: flex;               /* Layout flexbox */
+    gap: 18px;                   /* Espacio entre elementos */
+    justify-content: center;     /* Centrar horizontalmente */
+    align-items: center;         /* Centrar verticalmente */
+    margin-top: 8px;             /* Margen superior */
+    min-height: 38px;            /* Altura mínima */
+}
+
+/* Enlaces de redes sociales */
+.footer-social a {
+    display: flex;               /* Layout flexbox */
+    align-items: center;         /* Centrar contenido verticalmente */
+    justify-content: center;     /* Centrar contenido horizontalmente */
+    width: 38px;                 /* Ancho fijo */
+    height: 38px;                /* Alto fijo */
+    background: #F9FAFB;         /* Fondo claro */
+    border-radius: 50%;          /* Forma circular */
+    border: none;                /* Sin borde */
+    box-shadow: 0 2px 12px rgba(59,130,246,0.18); /* Sombra azul sutil */
+    transition: box-shadow 0.3s, background 0.3s, transform 0.2s; /* Transiciones múltiples */
+    color: #3B82F6;              /* Color azul */
+}
+
+/* Estado hover de enlaces sociales */
+.footer-social a:hover {
+    box-shadow: 0 6px 24px rgba(59,130,246,0.32); /* Sombra más pronunciada */
+    background: #E3EAFD;         /* Fondo azul claro */
+    transform: translateY(-4px) scale(1.08); /* Elevar y escalar */
+    color: #1F2937;              /* Color oscuro */
+}
+/* Imágenes en enlaces sociales */
+.footer-social img {
+    width: 24px;                 /* Ancho fijo */
+    height: 24px;                /* Alto fijo */
+    display: block;              /* Elemento de bloque */
+}
+
+/* Texto de copyright en footer */
+.footer-copy {
+    font-size: 1em;              /* Tamaño de fuente */
+    color: #60A5FA;              /* Color azul claro */
+    margin-top: 4px;             /* Margen superior */
+}
+
+/* ===== ANIMACIONES ESPECÍFICAS ===== */
+/* Clase para activar animación pulse en botón CV */
+.pulse-cv {
+    animation: pulse-cv 2.2s cubic-bezier(.77,.2,.32,1.01) infinite; /* Animación suave y lenta */
+}
+
+/* Keyframes para animación pulse del botón CV */
 @keyframes pulse-cv {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(59,130,246,0.18);}
-  60% { transform: scale(1.10); box-shadow: 0 0 20px 10px rgba(59,130,246,0.18);}
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(59,130,246,0.18);}
+    0% { 
+        transform: scale(1);     /* Estado inicial */
+        box-shadow: 0 0 0 0 rgba(59,130,246,0.18); /* Sin sombra expandida */
+    }
+    60% { 
+        transform: scale(1.10);  /* Expansión máxima */
+        box-shadow: 0 0 20px 10px rgba(59,130,246,0.18); /* Sombra expandida */
+    }
+    100% { 
+        transform: scale(1);     /* Retorno al estado inicial */
+        box-shadow: 0 0 0 0 rgba(59,130,246,0.18); /* Sin sombra expandida */
+    }
+}
+
+/* ===== UTILIDADES Y ESTADOS ESPECIALES ===== */
+/* Ocultar campo teléfono y su etiqueta completamente */
+input[name="tel"], label[for="tel"] {
+    display: none !important;    /* Ocultar completamente del layout */
+    cursor: default !important;  /* Cursor normal por defecto */
+}
+
+/* Mensajes del formulario de contacto (éxito/error) */
+.form-message {
+    margin-top: 15px;            /* Separación del formulario */
+    padding: 12px;               /* Espaciado interno cómodo */
+    border-radius: 0.6rem;       /* Bordes suavemente redondeados */
+    font-size: 1.08em;           /* Tamaño ligeramente mayor */
+    font-weight: 500;            /* Peso medio para legibilidad */
+    letter-spacing: 0.5px;       /* Espaciado sutil entre letras */
+    text-align: center;          /* Texto centrado */
+    transition: opacity 0.3s;    /* Transición suave de aparición */
+}
+
+/* Estado de éxito del mensaje */
+.form-message.success {
+    background: #1F4E4E;         /* Fondo verde oscuro profesional */
+    color: #4ADE80;              /* Texto verde brillante */
+    border: 1px solid #4ADE80;   /* Borde verde coordinado */
+}
+
+/* Estado de error del mensaje */
+.form-message.error {
+    background: #4A1F2E;         /* Fondo rojo oscuro profesional */
+    color: #F87171;              /* Texto rojo brillante */
+    border: 1px solid #F87171;   /* Borde rojo coordinado */
+}
+
+/* Estado de error para campos de entrada */
+.input-error {
+    border-color: #F87171 !important; /* Borde rojo para indicar error */
+    box-shadow: 0 2px 16px rgba(248,113,113,0.18) !important; /* Sombra roja sutil */
 }

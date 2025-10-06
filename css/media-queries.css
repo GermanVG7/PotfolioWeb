@@ -1,132 +1,216 @@
+/* ====================================
+   MEDIA QUERIES - Responsive Design
+   ==================================== */
+
+/* ===== TABLETS Y PANTALLAS MEDIANAS (900px y menos) ===== */
 @media (max-width: 900px) {
+    /* Sidebar de tecnologías: cambiar a posición estática */
     aside {
-        position: static !important;
-        width: 100%;
-        border-radius: 1rem;
-        box-shadow: none;
-        margin: 32px auto 0 auto;
-        padding: 20px 10px;
-        text-align: center;
-        top: auto;
-        right: auto;
-        transform: none;
-        z-index: auto;
+        position: static !important;  /* Cambiar de fixed a static */
+        width: 100%;                  /* Ancho completo */
+        border-radius: 1rem;          /* Mantener bordes redondeados */
+        box-shadow: none;             /* Quitar sombra en móviles */
+        margin: 32px auto 0 auto;     /* Centrar con margen superior */
+        padding: 20px 10px;           /* Espaciado reducido */
+        text-align: center;           /* Centrar contenido */
+        top: auto;                    /* Resetear posición top */
+        right: auto;                  /* Resetear posición right */
+        transform: none;              /* Resetear transformación */
+        z-index: auto;                /* Resetear z-index */
     }
+    
+    /* Contenido principal: mayor ancho y menos padding */
+    main {
+        max-width: 95%;               /* Usar más ancho de pantalla */
+        padding: 20px 16px;           /* Espaciado reducido */
+        margin: 20px auto;            /* Márgenes reducidos */
+    }
+    
+    /* Sección presentación: layout vertical */
     .presentacion {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
+        flex-direction: column;       /* Cambiar a columna */
+        align-items: center;          /* Centrar elementos */
+        padding: 10px 0;              /* Espaciado vertical reducido */
     }
+    
+    /* Foto de perfil: tamaño reducido */
     .presentacion img {
-        width: 120px;
-        height: 120px;
-        margin: 0 0 16px 0;
-        padding: 0;
+        width: 120px;                 /* Ancho reducido */
+        height: 120px;                /* Alto reducido */
+        margin: 0 0 16px 0;           /* Solo margen inferior */
+        padding: 0;                   /* Sin padding */
     }
+    
+    /* Texto de presentación: adaptado a móvil */
     .presentacion p {
-        padding: 10px;
-        font-size: 1em;
-        text-align: center;
-        word-break: break-word;
+        padding: 10px;                /* Padding reducido */
+        font-size: 1em;               /* Tamaño normal */
+        text-align: center;           /* Centrar texto */
+        word-break: break-word;       /* Permitir salto de palabra */
     }
+    
+    /* Lista de tecnologías: centrada */
     .tech-list {
-        justify-content: center;
+        justify-content: center;      /* Centrar iconos */
     }
+    
+    /* Proyectos: layout vertical */
     .sec-proyectos article .proyecto-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
+        flex-direction: column;       /* Cambiar a columna */
+        align-items: center;          /* Centrar elementos */
+        gap: 18px;                    /* Espacio entre elementos */
     }
+    
+    /* Imágenes de proyectos: responsive */
     .proyecto-img {
-        width: 100%;
-        max-width: 320px;
+        width: 100%;                  /* Ancho completo */
+        max-width: 320px;             /* Máximo ancho */
     }
 }
 
+/* ===== MÓVILES PEQUEÑOS (600px y menos) ===== */
 @media (max-width: 600px) {
+    /* Contenido principal: máximo aprovechamiento del ancho */
+    main {
+        max-width: 98%;               /* Casi todo el ancho de pantalla */
+        padding: 16px 12px;           /* Padding mínimo */
+        margin: 16px auto;            /* Márgenes mínimos */
+    }
+    
+    /* Presentación: espaciado mínimo */
     .presentacion {
-        padding: 4px 0;
+        padding: 4px 0;               /* Padding muy reducido */
     }
+    
+    /* Foto de perfil: tamaño muy pequeño */
     .presentacion img {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 10px;
+        width: 80px;                  /* Ancho muy reducido */
+        height: 80px;                 /* Alto muy reducido */
+        margin-bottom: 10px;          /* Margen inferior pequeño */
     }
+    
+    /* Texto de presentación: compacto */
     .presentacion p {
-        padding: 4px;
-        font-size: 0.95em;
+        padding: 4px;                 /* Padding mínimo */
+        font-size: 0.95em;            /* Tamaño ligeramente reducido */
     }
+    
+    /* Footer: compacto */
     footer {
-        font-size: 0.98em;
-        padding: 16px 0;
+        font-size: 0.98em;            /* Tamaño ligeramente reducido */
+        padding: 16px 0;              /* Padding reducido */
     }
+    
+    /* Enlaces sociales: tamaño reducido */
     .footer-social a {
-        width: 32px;
-        height: 32px;
-        font-size: 1.2em;
-        line-height: 32px;
+        width: 32px;                  /* Ancho reducido */
+        height: 32px;                 /* Alto reducido */
+        font-size: 1.2em;             /* Tamaño de icono */
+        line-height: 32px;            /* Alineación vertical */
     }
+    
+    /* Botón CV: compacto */
     .cv-download-btn {
-        padding: 7px 8px 7px 6px;
-        font-size: 0.98em;
-        min-width: 0;
+        padding: 7px 8px 7px 6px;     /* Padding muy reducido */
+        font-size: 0.98em;            /* Tamaño reducido */
+        min-width: 0;                 /* Sin ancho mínimo */
     }
+    
+    /* Texto del botón CV: reducido */
     .cv-btn-text {
-        font-size: 0.95em;
+        font-size: 0.95em;            /* Tamaño reducido */
     }
 }
 
+/* ===== TABLETS Y PANTALLAS GRANDES (1200px y menos) ===== */
 @media (max-width: 1200px) {
+    /* Título principal: tamaño reducido */
     header h1 {
-        font-size: 1.7em;
-        padding: 12px;
+        font-size: 1.8em;            /* Tamaño reducido pero legible */
+        padding: 12px;               /* Padding reducido */
+        letter-spacing: 1px;         /* Espaciado moderado */
     }
+    
+    /* Navegación: ancho completo */
     nav {
-        max-width: 100%;
-        padding: 8px;
+        max-width: 100%;             /* Usar todo el ancho disponible */
+        padding: 8px;                /* Padding reducido */
     }
+    
+    /* Enlaces de navegación: ajustados */
     nav a {
-        font-size: 1em;
-        margin: 0 8px;
-        padding: 6px 0;
+        font-size: 1em;              /* Tamaño estándar */
+        margin: 0 8px;               /* Márgenes reducidos */
+        padding: 6px 0;              /* Padding vertical reducido */
     }
 }
 
+/* ===== MÓVILES MEDIANOS (700px y menos) ===== */
 @media (max-width: 700px) {
+    /* Título principal: más pequeño */
     header h1 {
-        font-size: 1.2em;
-        padding: 8px;
+        font-size: 1.4em;            /* Tamaño adecuado para móvil */
+        padding: 8px;                /* Padding reducido */
+        letter-spacing: 0.5px;       /* Espaciado reducido */
+        margin: 8px;                 /* Margen reducido */
     }
+    
+    /* Navegación: layout vertical */
     nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 8px 0;
+        flex-direction: column;      /* Cambiar a columna */
+        align-items: center;         /* Centrar elementos */
+        padding: 8px 0;              /* Padding vertical */
     }
+    
+    /* Enlaces de navegación: apilados verticalmente */
     nav a {
-        display: block;
-        font-size: 1.1em;
-        margin: 8px 0;
-        padding: 8px 0;
-        width: 100%;
+        display: block;              /* Elemento de bloque */
+        font-size: 1.1em;           /* Tamaño ligeramente mayor */
+        margin: 8px 0;               /* Márgenes verticales */
+        padding: 8px 0;              /* Padding vertical */
+        width: 100%;                 /* Ancho completo */
     }
 }
 
-@media (max-width: 1800px) {
-    aside {
-        position: static !important;
-        width: 70%;
-        border-radius: 1rem;
-        box-shadow: none;
-        margin: 32px auto 0 auto;
-        padding: 20px 10px;
-        text-align: center;
-        font-size: 1.2rem;
-        top: auto !important;
-        right: auto !important;
-        transform: none !important;
-        z-index: auto;
+/* ===== MÓVILES MUY PEQUEÑOS (480px y menos) ===== */
+@media (max-width: 480px) {
+    /* Título principal: muy compacto */
+    header h1 {
+        font-size: 1.1em;            /* Tamaño mínimo legible */
+        padding: 6px;                /* Padding mínimo */
+        letter-spacing: 0.3px;       /* Espaciado mínimo */
+        margin: 6px;                 /* Margen mínimo */
+        line-height: 1.2;            /* Interlineado compacto */
     }
+    
+    /* Contenido principal: máximo aprovechamiento */
+    main {
+        max-width: 99%;              /* Casi todo el ancho de pantalla */
+        padding: 12px 8px;           /* Padding muy reducido */
+        margin: 12px auto;           /* Márgenes muy reducidos */
+    }
+}
+
+/* ===== PANTALLAS GRANDES PERO NO ULTRA-ANCHAS (1800px y menos) ===== */
+@media (max-width: 1800px) {
+    /* Sidebar de tecnologías: cambiar a posición centrada */
+    aside {
+        position: static !important;  /* Cambiar de fixed a static */
+        width: 70%;                   /* Ancho del 70% */
+        border-radius: 1rem;          /* Mantener bordes redondeados */
+        box-shadow: none;             /* Sin sombra en esta vista */
+        margin: 32px auto 0 auto;     /* Centrar con margen superior */
+        padding: 20px 10px;           /* Espaciado cómodo */
+        text-align: center;           /* Centrar contenido */
+        font-size: 1.2rem;            /* Tamaño de fuente mayor */
+        top: auto !important;         /* Resetear posición top */
+        right: auto !important;       /* Resetear posición right */
+        transform: none !important;   /* Resetear transformación */
+        z-index: auto;                /* Resetear z-index */
+    }
+    
+    /* Lista de tecnologías: centrada */
     .tech-list {
-        justify-content: center;
+        justify-content: center;      /* Centrar iconos de tecnologías */
     }
 }

@@ -1,147 +1,172 @@
+/* ====================================
+   LAYOUT - Estructura principal
+   ==================================== */
+
+/* ===== HEADER ===== */
 header {
-    background-color: #1F2937;
-    padding: 20px;
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    color: #3B82F6;
+    background-color: #1F2937;    /* Fondo gris oscuro */
+    padding: 20px;               /* Espaciado interno */
+    text-align: center;          /* Centrar contenido */
+    font-size: 2em;              /* Tamaño de fuente */
+    font-weight: bold;           /* Texto en negrita */
+    color: #3B82F6;              /* Color azul */
 }
 
 .header {
-    border-bottom: #3B82F6 solid 2px;
+    border-bottom: #3B82F6 solid 2px;  /* Borde inferior azul */
 }
 
 .header h1 {
-    margin: 15px;
-    font-size: 2.25em;
-    letter-spacing: 1.5px;
+    margin: 15px;                /* Márgenes alrededor del título */
+    font-size: 2.25em;           /* Tamaño grande para el nombre */
+    letter-spacing: 1.5px;       /* Espaciado entre letras */
 }
 
+/* ===== NAVEGACIÓN ===== */
 nav {
-    background-color: #0F172A;
-    max-width: 70%;
-    margin: 15px auto;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    border-radius: 1rem;
+    background-color: #0F172A;   /* Fondo muy oscuro */
+    max-width: 70%;              /* Ancho máximo responsive */
+    margin: 15px auto;           /* Centrado con márgenes */
+    padding: 10px;               /* Espaciado interno */
+    text-align: center;          /* Centrar enlaces */
+    display: flex;               /* Layout flexbox */
+    justify-content: space-around; /* Distribuir enlaces uniformemente */
+    border-radius: 1rem;         /* Bordes redondeados */
 }
 
+/* ===== CONTENIDO PRINCIPAL ===== */
 main {
-    max-width: 70%;
-    margin: 25px auto;
-    border: 1px solid #3B82F6;
-    border-radius: 1rem;
-    padding: 25px 48px;
-    background-color: #1F2937;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 70%;              /* Ancho máximo responsive */
+    margin: 25px auto;           /* Centrado con márgenes verticales */
+    border: 1px solid #3B82F6;   /* Borde azul */
+    border-radius: 1rem;         /* Bordes redondeados */
+    padding: 25px 48px;          /* Espaciado interno generoso */
+    background-color: #1F2937;   /* Fondo gris oscuro */
+    display: flex;               /* Layout flexbox */
+    flex-direction: column;      /* Dirección vertical */
+    align-items: center;         /* Centrar elementos */
 }
 
+/* ===== SIDEBAR TECNOLOGÍAS ===== */
 aside {
-    position: fixed;
-    top: 27.5%;
-    right: 15px;
-    transform: translateY(-50%);
-    width: 240px;
-    background: #1F2937;
-    color: #F9FAFB;
-    border-radius: 1rem;
-    box-shadow: -2px 0 12px rgba(59,130,246,0.08);
-    padding: 30px 20px;
-    z-index: 99;
-    text-align: left;
-    border: 1px solid #3B82F6;
+    position: fixed;             /* Posición fija en ventana */
+    top: 27.5%;                  /* Posición vertical */
+    right: 15px;                 /* Distancia del borde derecho */
+    transform: translateY(-50%); /* Centrar verticalmente */
+    width: 240px;                /* Ancho fijo */
+    background: #1F2937;         /* Fondo gris oscuro */
+    color: #F9FAFB;              /* Texto claro */
+    border-radius: 1rem;         /* Bordes redondeados */
+    box-shadow: -2px 0 12px rgba(59,130,246,0.08); /* Sombra sutil */
+    padding: 30px 20px;          /* Espaciado interno */
+    z-index: 99;                 /* Sobre otros elementos */
+    text-align: left;            /* Alineación de texto */
+    border: 1px solid #3B82F6;   /* Borde azul */
 }
 
+/* ===== FOOTER ===== */
 footer {
-    background: linear-gradient(135deg, #0F172A 0%, #232946 100%);
-    border-top: 2px solid #3B82F6;
-    padding: 24px 0;
-    text-align: center;
-    color: #60A5FA;
-    font-size: 1.08em;
-    letter-spacing: 1px;
-    margin-top: 48px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+    background: linear-gradient(135deg, #0F172A 0%, #232946 100%); /* Fondo degradado */
+    border-top: 2px solid #3B82F6;    /* Borde superior azul */
+    padding: 24px 0;                  /* Espaciado vertical */
+    text-align: center;               /* Centrar contenido */
+    color: #60A5FA;                   /* Color azul claro */
+    font-size: 1.08em;                /* Tamaño de fuente ligeramente mayor */
+    letter-spacing: 1px;              /* Espaciado entre letras */
+    margin-top: 48px;                 /* Margen superior */
+    display: flex;                    /* Layout flexbox */
+    flex-direction: column;           /* Dirección vertical */
+    align-items: center;              /* Centrar elementos */
+    gap: 12px;                        /* Espacio entre elementos */
 }
 
+/* ===== ANIMACIONES ===== */
+/* Animación pulse para botón CV al final de página */
 .cv-download-btn.pulse-cv {
     animation: pulseCV 2s cubic-bezier(.68,-0.55,.27,1.55) infinite;
 }
 @keyframes pulseCV {
-    0% { transform: scale(1); }
-    40% { transform: scale(1.08); }
-    60% { transform: scale(0.97); }
-    100% { transform: scale(1); }
+    0% { transform: scale(1); }      /* Estado inicial */
+    40% { transform: scale(1.08); }  /* Expansión */
+    60% { transform: scale(0.97); }  /* Contracción ligera */
+    100% { transform: scale(1); }    /* Retorno al estado inicial */
 }
 
+/* ===== TECNOLOGÍAS SIDEBAR ===== */
+/* Contenedor de iconos de tecnologías */
 .tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 48px; /* Aún más espacio entre iconos */
-    align-items: center;
-    justify-content: center;
-    margin-top: 18px;
+    display: flex;               /* Layout flexbox */
+    flex-wrap: wrap;             /* Permitir salto de línea */
+    gap: 48px;                   /* Espacio generoso entre iconos */
+    align-items: center;         /* Centrar verticalmente */
+    justify-content: center;     /* Centrar horizontalmente */
+    margin-top: 18px;            /* Margen superior */
 }
+
+/* Contenedor individual de cada icono */
 .tech-icon {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;          /* Para posicionar elementos hijos */
+    display: flex;               /* Layout flexbox */
+    flex-direction: column;      /* Dirección vertical */
+    align-items: center;         /* Centrar elementos */
 }
+
+/* Estilos de los iconos de tecnologías */
 .tech-icon img {
-    width: 44px;
-    height: 44px;
-    transition: transform 0.35s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.35s, filter 0.35s;
-    cursor: pointer;
-    z-index: 1;
-    filter: grayscale(0.3) brightness(0.85);
+    width: 44px;                 /* Ancho fijo */
+    height: 44px;                /* Alto fijo */
+    transition: transform 0.35s cubic-bezier(.68,-0.55,.27,1.55), 
+                box-shadow 0.35s, 
+                filter 0.35s;    /* Transiciones suaves */
+    cursor: pointer;             /* Cursor de mano */
+    z-index: 1;                  /* Sobre otros elementos */
+    filter: grayscale(0.3) brightness(0.85); /* Filtro inicial */
 }
+
+/* Efecto hover en iconos */
 .tech-icon:hover img {
-    transform: scale(1.22) translateY(-6px);
-    box-shadow: 0 6px 24px rgba(59,130,246,0.18);
-    filter: none;
+    transform: scale(1.22) translateY(-6px); /* Escalar y elevar */
+    box-shadow: 0 6px 24px rgba(59,130,246,0.18); /* Sombra azul */
+    filter: none;                /* Quitar filtros */
 }
+
+/* Tooltip de nombre de tecnología (no usado actualmente) */
 .tech-name {
-    position: absolute;
-    top: 110%;
-    left: 50%;
-    transform: translateX(-50%) translateY(0);
-    background: #232946;
-    color: #60A5FA;
-    padding: 4px 12px;
-    border-radius: 0.5em;
-    font-size: 0.98em;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s, transform 0.3s;
-    box-shadow: 0 2px 8px rgba(59,130,246,0.12);
+    position: absolute;          /* Posición absoluta */
+    top: 110%;                   /* Debajo del icono */
+    left: 50%;                   /* Centrado horizontalmente */
+    transform: translateX(-50%) translateY(0); /* Centrar */
+    background: #232946;         /* Fondo oscuro */
+    color: #60A5FA;              /* Texto azul claro */
+    padding: 4px 12px;           /* Espaciado interno */
+    border-radius: 0.5em;        /* Bordes redondeados */
+    font-size: 0.98em;           /* Tamaño de fuente */
+    white-space: nowrap;         /* No romper texto */
+    opacity: 0;                  /* Inicialmente invisible */
+    pointer-events: none;        /* No interferir con eventos */
+    transition: opacity 0.3s, transform 0.3s; /* Transiciones */
+    box-shadow: 0 2px 8px rgba(59,130,246,0.12); /* Sombra sutil */
 }
+
 .tech-icon:hover .tech-name {
-    opacity: 1;
-    transform: translateX(-50%) translateY(4px);
+    opacity: 1;                  /* Hacer visible */
+    transform: translateX(-50%) translateY(4px); /* Mover ligeramente */
 }
+
+/* Contenedor fijo para mostrar nombre de tecnología */
 .tech-name-fixed {
-    min-height: 1.8em;
-    margin-top: 18px;
-    text-align: center;
-    font-size: 1.08em;
-    color: #60A5FA;
-    background: #232946;
-    border-radius: 0.5em;
-    padding: 6px 18px;
-    box-shadow: 0 2px 8px rgba(59,130,246,0.12);
-    display: block;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    transition: background 0.3s, color 0.3s;
+    min-height: 1.8em;           /* Altura mínima para consistencia */
+    margin-top: 18px;            /* Margen superior */
+    text-align: center;          /* Centrar texto */
+    font-size: 1.08em;           /* Tamaño de fuente */
+    color: #60A5FA;              /* Color azul claro */
+    background: #232946;         /* Fondo oscuro */
+    border-radius: 0.5em;        /* Bordes redondeados */
+    padding: 6px 18px;           /* Espaciado interno */
+    box-shadow: 0 2px 8px rgba(59,130,246,0.12); /* Sombra sutil */
+    display: block;              /* Elemento de bloque */
+    width: fit-content;          /* Ancho ajustado al contenido */
+    margin-left: auto;           /* Centrar horizontalmente */
+    margin-right: auto;          /* Centrar horizontalmente */
+    transition: background 0.3s, color 0.3s; /* Transiciones suaves */
 }

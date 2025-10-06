@@ -1,8 +1,13 @@
+/* ====================================
+   ESTILOS BASE - Configuración global
+   ==================================== */
+
+/* Configuración principal del body */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    background: linear-gradient(135deg, #111827 0%, #0F172A 100%);
-    color: #F9FAFB;
-    min-height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
+    font-family: 'Roboto', Arial, sans-serif;                         /* Fuente principal con fallbacks */
+    background: linear-gradient(135deg, #111827 0%, #0F172A 100%);     /* Fondo degradado oscuro */
+    color: #F9FAFB;                                                    /* Color de texto claro */
+    min-height: 100vh;                                                 /* Altura mínima de ventana completa */
+    width: 100vw;                                                      /* Ancho completo de ventana */
+    overflow-x: hidden;                                                /* Oculta scroll horizontal */
 }

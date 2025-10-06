@@ -1,6 +1,10 @@
-/* Reset y box-sizing */
+/* ====================================
+   RESET CSS - Normalización de estilos
+   ==================================== */
+
+/* Reset universal - elimina márgenes, padding y aplica box-sizing */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el width/height */
+    margin: 0;               /* Elimina márgenes por defecto */
+    padding: 0;              /* Elimina padding por defecto */
 }

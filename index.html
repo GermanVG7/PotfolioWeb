@@ -14,13 +14,21 @@
     <link rel="stylesheet" href="/css/components.css">
     <link rel="stylesheet" href="/css/media-queries.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- EmailJS para envío de emails -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("AEcmMTaXzEYmNbGPO"); // Tu Public Key de EmailJS configurado
+        })();
+    </script>
 
 </head>
 
 <body>
 
     <header class="header">
-        <h1>Portfolio Germán Villar García</h1>
+        <h1>Germán Villar García</h1>
 
         <nav>
             <a class="link" href="#formacion">Formación</a>
@@ -32,15 +40,30 @@
     <aside>
         <header>Mis tecnologías favoritas</header>
         <div class="tech-list">
-            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" data-name="Java"></div>
-            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" data-name="HTML5"></div>
-            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" data-name="CSS3"></div>
-            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" data-name="JavaScript"></div>
-            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" data-name="React"></div>
-            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" data-name="Node.js"></div>
-            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" data-name="MySQL"></div>
-            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" data-name="GitHub"></div>
-            <div class="tech-icon"><img src="img/github-copilot-icon.png" alt="GitHub Copilot" data-name="GitHub Copilot"></div>
+            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                    alt="Java" data-name="Java"></div>
+            <div class="tech-icon"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+                    data-name="HTML5"></div>
+            <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                    alt="CSS3" data-name="CSS3"></div>
+            <div class="tech-icon"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript" data-name="JavaScript"></div>
+            <div class="tech-icon"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+                    data-name="React"></div>
+            <div class="tech-icon"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+                    data-name="Node.js"></div>
+            <div class="tech-icon"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+                    data-name="MySQL"></div>
+            <div class="tech-icon"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                    data-name="GitHub"></div>
+            <div class="tech-icon"><img src="img/github-copilot-icon.png" alt="GitHub Copilot"
+                    data-name="GitHub Copilot"></div>
         </div>
         <div class="tech-name-fixed"></div>
     </aside>
@@ -94,14 +117,18 @@
                 <div class="proyecto-content">
                     <div class="proyecto-text">
                         <header>
-                            <h4><a href="https://github.com/GermanVG7/Gestion_Almacen" target="_blank">Aplicación de escritorio de gestión de almacén</a></h4>
+                            <h4><a href="https://github.com/GermanVG7/Gestion_Almacen" target="_blank">Aplicación de
+                                    escritorio de gestión de almacén</a></h4>
                         </header>
-                        <p>Desarrollo de una aplicación de escritorio para la gestión de inventarios, permitiendo a los usuarios añadir, modificar y eliminar productos, así como consultar el estado del stock en tiempo real. Desarrollado como proyecto de final del grado superior.</p>
+                        <p>Desarrollo de una aplicación de escritorio para la gestión de inventarios, permitiendo a los
+                            usuarios añadir, modificar y eliminar productos, así como consultar el estado del stock en
+                            tiempo real. Desarrollado como proyecto de final del grado superior.</p>
                         <footer>
                             <small>Tecnologías utilizadas: Java, MySQL</small>
                         </footer>
                     </div>
-                    <img class="proyecto-img" src="img/LogoAlmacen.png" alt="Imagen del proyecto" title="Proyecto ejemplo">
+                    <img class="proyecto-img" src="img/LogoAlmacen.png" alt="Imagen del proyecto"
+                        title="Proyecto ejemplo">
                 </div>
             </article>
 
@@ -109,14 +136,18 @@
                 <div class="proyecto-content">
                     <div class="proyecto-text">
                         <header>
-                            <h4><a href="https://github.com/GermanVG7/WebArteLea" target="_blank">Web personal de una artista</a></h4>
+                            <h4><a href="https://github.com/GermanVG7/WebArteLea" target="_blank">Web personal de una
+                                    artista</a></h4>
                         </header>
-                        <p>Desarrollo de una web personal para una artista, permitiendo mostrar su portfolio, biografía y información de contacto. Desarrollado como proyecto de final del curso de confección y publicación de páginas web.</p>
+                        <p>Desarrollo de una web personal para una artista, permitiendo mostrar su portfolio, biografía
+                            y información de contacto. Desarrollado como proyecto de final del curso de confección y
+                            publicación de páginas web.</p>
                         <footer>
                             <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
                         </footer>
                     </div>
-                    <img class="proyecto-img" src="img/proyecto-ejemplo.jpg" alt="Imagen del proyecto" title="Proyecto ejemplo">
+                    <img class="proyecto-img" src="img/LogoAlmacen.png" alt="Imagen del proyecto"
+                        title="Web personal artista">
                 </div>
             </article>
 
@@ -124,14 +155,17 @@
                 <div class="proyecto-content">
                     <div class="proyecto-text">
                         <header>
-                            <h4><a href="https://github.com/GermanVG7/Portfolio3D" target="_blank">Portfolio web 3D personal</a></h4>
+                            <h4><a href="https://github.com/GermanVG7/Portfolio3D" target="_blank">Portfolio web 3D
+                                    personal</a></h4>
                         </header>
-                        <p>Desarrollo de un portfolio web 3D, con una web animada con elementos tridimensionales. Desarrollado como proyecto personal.</p>
+                        <p>Desarrollo de un portfolio web 3D, con una web animada con elementos tridimensionales.
+                            Desarrollado como proyecto personal.</p>
                         <footer>
                             <small>Tecnologías utilizadas: HTML, CSS, JavaScript, React, Three Fiber, Blender</small>
                         </footer>
                     </div>
-                    <img class="proyecto-img" src="img/Portfolio3D.JPG" alt="Imagen del proyecto" title="Proyecto ejemplo">
+                    <img class="proyecto-img" src="img/Portfolio3D.JPG" alt="Imagen del proyecto"
+                        title="Proyecto ejemplo">
                 </div>
             </article>
 
@@ -139,14 +173,17 @@
                 <div class="proyecto-content">
                     <div class="proyecto-text">
                         <header>
-                            <h4><a href="https://github.com/GermanVG7/DigitlandWP" target="_blank">Web de Agencia Digital</a></h4>
+                            <h4><a href="https://github.com/GermanVG7/DigitlandWP" target="_blank">Web de Agencia
+                                    Digital</a></h4>
                         </header>
-                        <p>Desarrollo de un sitio web para una agencia digital, con un diseño moderno y elementos interactivos. Desarrollado como proyecto personal para prácticar.</p>
+                        <p>Desarrollo de un sitio web para una agencia digital, con un diseño moderno y elementos
+                            interactivos. Desarrollado como proyecto personal para prácticar.</p>
                         <footer>
                             <small>Tecnologías utilizadas: HTML, CSS, JavaScript, WP, Timber, Twig</small>
                         </footer>
                     </div>
-                    <img class="proyecto-img" src="img//DigitalWP.JPG" alt="Imagen del proyecto" title="Proyecto ejemplo">
+                    <img class="proyecto-img" src="img//DigitalWP.JPG" alt="Imagen del proyecto"
+                        title="Proyecto ejemplo">
                 </div>
             </article>
         </section>
@@ -175,13 +212,16 @@
     <footer>
         <div class="footer-copy">&copy; 2025 Germán Villar García. Todos los derechos reservados.</div>
         <div class="footer-social">
-            <a href="https://www.linkedin.com/in/germ%C3%A1n-villar-garc%C3%ADa-0b375594/" target="_blank" title="LinkedIn" aria-label="LinkedIn">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+            <a href="https://www.linkedin.com/in/germ%C3%A1n-villar-garc%C3%ADa-0b375594/" target="_blank"
+                title="LinkedIn" aria-label="LinkedIn">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                    alt="LinkedIn" />
             </a>
             <a href="https://github.com/GermanVG7" target="_blank" title="GitHub" aria-label="GitHub">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
             </a>
-            <button class="cv-download-btn" onclick="window.open('cv/GermanVillarGarciaCV.pdf', '_blank')" title="Descargar CV en PDF" aria-label="Descargar CV" type="button">
+            <button class="cv-download-btn" onclick="window.open('cv/GermanVillarGarciaCV.pdf', '_blank')"
+                title="Descargar CV en PDF" aria-label="Descargar CV" type="button">
                 <span class="cv-btn-content">
                     <span class="cv-btn-text">Descargar CV (PDF)</span>
                 </span>
